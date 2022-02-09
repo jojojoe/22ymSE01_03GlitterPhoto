@@ -1,0 +1,7 @@
+GPyMGlitterPhoto.xcodeproj/xcuserdata/
+GPyMGlitterPhoto.xcworkspace/
+Pods/
+*.swp
+Podfile.lock
+.DS_Store
+GPyMGlitterPhoto.xcodeproj/project.xcworkspace/xcuserdata/
