@@ -77,7 +77,13 @@ class AFlyerLibManage: NSObject, AppsFlyerLibDelegate {
             }
         }
         
-        UserDefaults.standard.setValue(source, forKey: "AppsFlyerLib")
+        var dic: [String : Any] = [:]
+        dic["af_message"] = source["af_message"] as? String ?? ""
+        dic["af_status"] = source["af_status"] as? String ?? ""
+        dic["install_time"] = source["install_time"] as? String ?? ""
+        dic["is_first_launch"] = source["is_first_launch"] as? Int ?? 0
+        
+        UserDefaults.standard.setValue(dic, forKey: "AppsFlyerLib")
         UserDefaults.standard.synchronize()
         NotificationCenter.default.post(name: .notificationPostAFlyerLib, object: nil)
     }
